@@ -2,7 +2,7 @@ var cart = {
     async create({ product, quantity, price, total }) {
       const res = await fetch("http://localhost:3001/cart/create", {
         method: "POST",
-        credentials: "include",
+        // credentials: "include",
         headers: {
           "Content-type": "application/json",
         },
@@ -15,10 +15,10 @@ var cart = {
     async all() {
       const res = await fetch("http://localhost:3001/cart/all", {
         method: "GET",
-        credentials: "include",
+        // credentials: "include",
         headers: {
           "Content-type": "application/json",
-          Origin: "http://localhost:3000",
+          // Origin: "http://localhost:3000",
         },
       });
   
@@ -30,7 +30,7 @@ var cart = {
     async delete({product, quantity, price, total}){
       await fetch(`http://localhost:3001/cart/delete/`,{
               method: "POST",
-              credentials: "include",
+              // credentials: "include",
               headers: {
                       "Content-type": "application/json",
               },
@@ -45,7 +45,7 @@ var cart = {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    origin: 'http://localhost:3000'
+                    // origin: 'http://localhost:3000'
                 }
             })
             const result = res.json();
@@ -55,7 +55,7 @@ var cart = {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    origin: 'http://localhost:3000'
+                    // origin: 'http://localhost:3000'
                 }
             })
             const result = res.json();
@@ -65,7 +65,7 @@ var cart = {
   async update({id, title, category, item, imageUrl, desc}){
     const res= await fetch(`http://localhost:3001/product/update/`,{
               method: "POST",
-              credentials: "include",
+              // credentials: "include",
               headers: {
                       "Content-type": "application/json",
                       // Origin: "http://localhost:3000",

@@ -2,7 +2,7 @@ var category = {
   async create({ name, desc, imageUrl }) {
     const res = await fetch("http://localhost:3001/category/create", {
       method: "POST",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
       },
@@ -15,7 +15,7 @@ var category = {
   async all() {
     const res = await fetch("http://localhost:3001/category/categorized-items", {
       method: "GET",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
         // Origin: "http://localhost:3000",
@@ -30,7 +30,7 @@ var category = {
   async allcategory() {
     const res = await fetch("http://localhost:3001/category/all", {
             method: "GET",
-            credentials: "include",
+            // credentials: "include",
             headers: {
                     "Content-type": "application/json",
                     // Origin: "http://localhost:3000",
@@ -44,7 +44,7 @@ var category = {
   async update({id, name, desc, imageUrl }) {
     const res = await fetch("http://localhost:3001/category/update", {
       method: "POST",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
       },
@@ -57,7 +57,7 @@ var category = {
   async delete({id}){
           await fetch(`http://localhost:3001/category/delete`,{
                   method: "POST",
-                  credentials: "include",
+                  // credentials: "include",
                   headers: {
                           "Content-type": "application/json",
                   },

@@ -2,7 +2,7 @@ var item = {
   async create({ name, desc, category }) {
     const res = await fetch("http://localhost:3001/item/create", {
       method: "POST",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
       },
@@ -15,10 +15,10 @@ var item = {
   async all() {
     const res = await fetch("http://localhost:3001/item/all", {
       method: "GET",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
-        Origin: "http://localhost:3000",
+        // Origin: "http://localhost:3000",
       },
     });
 
@@ -31,7 +31,7 @@ var item = {
   async update({ id,name, desc, category }) {
     const res = await fetch(`http://localhost:3001/item/update/`, {
             method: "POST",
-            credentials: "include",
+            // credentials: "include",
             headers: {
                     "Content-type": "application/json",
             },

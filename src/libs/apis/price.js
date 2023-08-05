@@ -2,7 +2,7 @@ var price = {
   async add({ price, source, product }) {
     const res = await fetch("http://localhost:3001/price/create", {
       method: "POST",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
       },

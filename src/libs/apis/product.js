@@ -2,7 +2,7 @@ var product = {
   async create({ title, category, imageUrl, desc, price }) {
     const res = await fetch("http://localhost:3001/product/create", {
       method: "POST",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
       },
@@ -15,10 +15,10 @@ var product = {
   async all() {
     const res = await fetch("http://localhost:3001/product/all", {
       method: "GET",
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-type": "application/json",
-        Origin: "http://localhost:3000",
+        // Origin: "http://localhost:3000",
       },
     });
 
@@ -30,7 +30,7 @@ var product = {
   async delete({id, title, category, imageUrl, desc, price}){
     await fetch(`http://localhost:3001/product/delete/`,{
             method: "POST",
-            credentials: "include",
+            // credentials: "include",
             headers: {
                     "Content-type": "application/json",
             },
@@ -45,7 +45,7 @@ async getallproduct(categoryId){
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    origin: 'http://localhost:3000'
+                    // origin: 'http://localhost:3000'
                 }
             })
             const result = res.json();
@@ -55,7 +55,7 @@ async getallproduct(categoryId){
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    origin: 'http://localhost:3000'
+                    // origin: 'http://localhost:3000'
                 }
             })
             const result = res.json();
@@ -68,7 +68,7 @@ async getallproduct(categoryId){
               method: 'GET',
               headers: {
                   'content-type': 'application/json',
-                  origin: 'http://localhost:3000'
+                  // origin: 'http://localhost:3000'
               }
           })
           const result = res.json();
@@ -78,7 +78,7 @@ async getallproduct(categoryId){
               method: 'GET',
               headers: {
                   'content-type': 'application/json',
-                  origin: 'http://localhost:3000'
+                  // origin: 'http://localhost:3000'
               }
           })
           const result = res.json();
@@ -88,7 +88,7 @@ async getallproduct(categoryId){
 async update({id, title, category, item, imageUrl, desc}){
   const res= await fetch(`http://localhost:3001/product/update/`,{
             method: "POST",
-            credentials: "include",
+            // credentials: "include",
             headers: {
                     "Content-type": "application/json",
                     // Origin: "http://localhost:3000",
