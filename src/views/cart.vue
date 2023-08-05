@@ -71,7 +71,7 @@ export default {
             <td>{{ products.price }}</td>
             <td><img class="w-12" src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg"> </td>
         </tr>
-        <tr class="h-48 " >
+        <!-- <tr class="h-48 " >
           
             <td><img alt="" class="h-48" :src="items.imageUrl" /></td>
             <td>
@@ -79,7 +79,7 @@ export default {
             </td>
             <td>{{ items.price }}</td>
             <td><img class="w-12" src="https://static.vecteezy.com/system/resources/thumbnails/003/241/364/small/trash-bin-icon-line-vector.jpg"> </td>
-        </tr>
+        </tr> -->
         </table>
         <div class="pay border-2 rounded-lg bg-[#E6E5FF] w-3/12">
         <h1 class="text-xl font-bold">Summary</h1>
