@@ -1,6 +1,7 @@
 var price = {
   async add({ price, source, product }) {
-    const res = await fetch("http://localhost:3001/price/create", {
+    // const res = await fetch("http://localhost:3001/price/create", {
+      const res = await fetch("https://samkhema-com.onrender.com/price/create", {
       method: "POST",
       // credentials: "include",
       headers: {

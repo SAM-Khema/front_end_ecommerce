@@ -1,6 +1,7 @@
 var product = {
   async create({ title, category, imageUrl, desc, price }) {
-    const res = await fetch("http://localhost:3001/product/create", {
+    // const res = await fetch("http://localhost:3001/product/create", {
+      const res = await fetch("https://samkhema-com.onrender.com/product/create", {
       method: "POST",
       // credentials: "include",
       headers: {
@@ -13,7 +14,8 @@ var product = {
     return result;
   },
   async all() {
-    const res = await fetch("http://localhost:3001/product/all", {
+    // const res = await fetch("http://localhost:3001/product/all", {
+      const res = await fetch("https://samkhema-com.onrender.com/product/all", {
       method: "GET",
       // credentials: "include",
       headers: {
@@ -28,7 +30,7 @@ var product = {
     return result;
   },
   async delete({id, title, category, imageUrl, desc, price}){
-    await fetch(`http://localhost:3001/product/delete/`,{
+    await fetch(`https://samkhema-com.onrender.com/product/delete/`,{
             method: "POST",
             // credentials: "include",
             headers: {
@@ -41,7 +43,7 @@ var product = {
 },
 async getallproduct(categoryId){
     if(categoryId == ""){
-            const res = await fetch('http://localhost:3001/product/all',{
+            const res = await fetch('https://samkhema-com.onrender.com/product/all',{
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
@@ -51,7 +53,7 @@ async getallproduct(categoryId){
             const result = res.json();
             return result
         }else{
-            const res = await fetch(`http://localhost:3001/product/all/${categoryId}/${itemId}`,{
+            const res = await fetch(`https://samkhema-com.onrender.com/product/all/${categoryId}/${itemId}`,{
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
@@ -64,7 +66,7 @@ async getallproduct(categoryId){
 },
 async getallproduct(categoryId){
   if(categoryId == ""){
-          const res = await fetch('http://localhost:3001/product/all',{
+          const res = await fetch('https://samkhema-com.onrender.com/product/all',{
               method: 'GET',
               headers: {
                   'content-type': 'application/json',
@@ -74,7 +76,7 @@ async getallproduct(categoryId){
           const result = res.json();
           return result
       }else{
-          const res = await fetch(`http://localhost:3001/product/all/${categoryId}`,{
+          const res = await fetch(`https://samkhema-com.onrender.com/product/all/${categoryId}`,{
               method: 'GET',
               headers: {
                   'content-type': 'application/json',
@@ -86,7 +88,7 @@ async getallproduct(categoryId){
       }
 },
 async update({id, title, category, item, imageUrl, desc}){
-  const res= await fetch(`http://localhost:3001/product/update/`,{
+  const res= await fetch(`https://samkhema-com.onrender.com/product/update/`,{
             method: "POST",
             // credentials: "include",
             headers: {

@@ -1,6 +1,7 @@
 var category = {
   async create({ name, desc, imageUrl }) {
-    const res = await fetch("http://localhost:3001/category/create", {
+    // const res = await fetch("http://localhost:3001/category/create", {
+      const res = await fetch("https://samkhema-com.onrender.com/category/create", {
       method: "POST",
       // credentials: "include",
       headers: {
@@ -13,7 +14,8 @@ var category = {
     return result;
   },
   async all() {
-    const res = await fetch("http://localhost:3001/category/categorized-items", {
+    // const res = await fetch("http://localhost:3001/category/categorized-items", {
+      const res = await fetch("https://samkhema-com.onrender.com/category/categorized-items", {
       method: "GET",
       // credentials: "include",
       headers: {
@@ -28,7 +30,8 @@ var category = {
     return result;
   },
   async allcategory() {
-    const res = await fetch("http://localhost:3001/category/all", {
+    // const res = await fetch("http://localhost:3001/category/all", {
+      const res = await fetch("https://samkhema-com.onrender.com/category/all", {
             method: "GET",
             // credentials: "include",
             headers: {
@@ -42,7 +45,8 @@ var category = {
     return result;
 },
   async update({id, name, desc, imageUrl }) {
-    const res = await fetch("http://localhost:3001/category/update", {
+    // const res = await fetch("http://localhost:3001/category/update", {
+      const res = await fetch("https://samkhema-com.onrender.com/category/update", {
       method: "POST",
       // credentials: "include",
       headers: {
@@ -55,7 +59,7 @@ var category = {
     return result;
   },
   async delete({id}){
-          await fetch(`http://localhost:3001/category/delete`,{
+          await fetch(`https://samkhema-com.onrender.com/category/delete`,{
                   method: "POST",
                   // credentials: "include",
                   headers: {

@@ -1,6 +1,7 @@
 var item = {
   async create({ name, desc, category }) {
-    const res = await fetch("http://localhost:3001/item/create", {
+    // const res = await fetch("http://localhost:3001/item/create", {
+      const res = await fetch("https://samkhema-com.onrender.com/item/create", {
       method: "POST",
       // credentials: "include",
       headers: {
@@ -13,7 +14,8 @@ var item = {
     return result;
   },
   async all() {
-    const res = await fetch("http://localhost:3001/item/all", {
+    // const res = await fetch("http://localhost:3001/item/all", {
+      const res = await fetch("https://samkhema-com.onrender.com/item/all", {
       method: "GET",
       // credentials: "include",
       headers: {
@@ -29,7 +31,7 @@ var item = {
   }
   ,
   async update({ id,name, desc, category }) {
-    const res = await fetch(`http://localhost:3001/item/update/`, {
+    const res = await fetch(`https://samkhema-com.onrender.com/item/update/`, {
             method: "POST",
             // credentials: "include",
             headers: {
